@@ -1,6 +1,7 @@
 package com.github.zjjfly.ls.chapt5
 
 import scala.util.Random
+import scala.language.postfixOps
 
 /**
   * Created by zjjfly on 16/3/16.

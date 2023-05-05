@@ -3,6 +3,7 @@ package com.github.zjjfly.ls.chapt5
 import java.util.UUID
 
 import scala.util.Random
+import scala.language.postfixOps
 
 /**
   * 函数字面量块

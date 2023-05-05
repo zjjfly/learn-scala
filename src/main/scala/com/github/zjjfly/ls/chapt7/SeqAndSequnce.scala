@@ -1,5 +1,6 @@
 package com.github.zjjfly.ls.chapt7
 
+import scala.language.postfixOps
 /**
   * Created by zjjfly on 16/4/4.
   */
@@ -32,21 +33,21 @@ object SeqAndSequnce {
     //一个stream的元素是被缓存起来以备后用,确保每一个元素只生成一次.Stream理论上可以是无限长的
     //Stream可以被Stream.Empty终止,和List.Nil对应
     //Stream使用一个头元素和一个函数的递归调用初始化
-    def inc(i: Int): Stream[Int] = {
+    def inc(i: Int): LazyList[Int] = {
       println("i=" + i)
-      Stream.cons(i, inc(i + 1))
+      LazyList.cons(i, inc(i + 1))
     }
     val s = inc(1)
     println("s = " + s)
     val l = s.take(5).toList
     println("l = " + l)
     //还有一种产生Stream的方法是用#::
-    def increase(head: Int): Stream[Int] = head #:: increase(head + 1)
+    def increase(head: Int): LazyList[Int] = head #:: increase(head + 1)
     println(increase(10) take 10 toList)
 
     //生产一个有限的Stream,用带两个参数的递归函数,一个起始值,一个终止值
-    def to(head: Char, end: Char): Stream[Char] = (head > end) match {
-      case true  => Stream.Empty //Stream.Empty终止Stream
+    def to(head: Char, end: Char): LazyList[Char] = (head > end) match {
+      case true  => LazyList.empty //Stream.Empty终止Stream
       case false => head #:: to((head + 1).toChar, end)
     }
     val hexChars = to('a', 'f').take(20).toList

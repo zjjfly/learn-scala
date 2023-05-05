@@ -2,6 +2,7 @@ package com.github.zjjfly.ls.chapt6
 
 import scala.io.Source
 import scala.util.matching.Regex
+import scala.language.postfixOps
 
 /**
   * Created by zjjfly on 16/3/29.

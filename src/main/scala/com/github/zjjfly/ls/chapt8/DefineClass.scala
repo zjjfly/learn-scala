@@ -20,8 +20,10 @@ object DefineClass {
       extends Car("Lotus", reserved) {}
 
   //类型参数化
-  class Singular[A](element: A) extends Traversable[A] {
-    def foreach[B](f: A => B) = f(element)
+  class Singular[A](element: A) extends Iterable[A] {
+    override def foreach[B](f: A => B) = f(element)
+
+    override def iterator: Iterator[A] = ???
   }
 
   def main(args: Array[String]): Unit = {

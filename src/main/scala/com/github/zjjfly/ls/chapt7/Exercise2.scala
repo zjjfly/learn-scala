@@ -1,6 +1,7 @@
 package com.github.zjjfly.ls.chapt7
 
 import scala.io.Source
+import scala.language.postfixOps
 
 /**
   * Created by zjjfly on 16/4/7.

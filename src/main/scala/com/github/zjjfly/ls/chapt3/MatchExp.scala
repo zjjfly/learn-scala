@@ -1,5 +1,7 @@
 package com.github.zjjfly.ls.chapt3
 
+import scala.language.postfixOps
+
 /**
   * 匹配表达式
   * Created by zjjfly on 16/3/11.

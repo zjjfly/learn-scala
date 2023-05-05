@@ -1,5 +1,7 @@
 package com.github.zjjfly.ls.chapt2
 
+import scala.language.postfixOps
+
 /**
   * Learning Scala的第二章习题
   * Created by zjjfly on 16/3/11.

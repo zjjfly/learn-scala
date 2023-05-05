@@ -2,8 +2,9 @@ package com.github.zjjfly.ls
 
 import java.io.File
 import java.nio.file.{Files, Paths}
-
 import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
 import scala.collection.JavaConverters.asScalaIteratorConverter
 import scala.util.{Random, Try}
@@ -23,7 +24,7 @@ object HtmlUtil {
   }
 }
 
-class HtmlUtilSpec extends FlatSpec with Matchers {
+class HtmlUtilSpec extends AnyFlatSpec with Matchers {
   "The Html Utils object" should "remove single elements" in {
     HtmlUtil.removeMarkup("<br/>") should equal("")
   }
@@ -85,7 +86,7 @@ trait SafeStringUtil {
 //创建一个特质的对象版本是很常用的扩展特质的实用性的方法
 object SafeStringUtil extends SafeStringUtil
 
-class SafeStringUtilSpec extends FlatSpec with Matchers {
+class SafeStringUtilSpec extends AnyFlatSpec with Matchers {
   "The com.github.zjjfly.ls.SafeStringUtil Object should" should "return a None when input string is empty" in {
     SafeStringUtil.trimToNone("") should be(None)
     SafeStringUtil.trimToNone(" ") should be(None)
@@ -135,7 +136,7 @@ class SafeStringUtilSpec extends FlatSpec with Matchers {
     SafeStringUtil.randomLetters(-1) should equal("")
   }
 }
-class MultiReplacerSpec extends FlatSpec with Matchers with BeforeAndAfterAll {
+class MultiReplacerSpec extends AnyFlatSpec with Matchers with BeforeAndAfterAll {
   import com.github.zjjfly.ls.chapt9.MultiReplacer._
 
   override protected def afterAll(): Unit = {

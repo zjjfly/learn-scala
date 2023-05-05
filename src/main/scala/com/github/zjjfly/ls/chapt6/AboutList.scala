@@ -1,6 +1,7 @@
 package com.github.zjjfly.ls.chapt6
 
 import scala.annotation.tailrec
+import scala.language.postfixOps
 
 /**
   * Created by zjjfly on 16/3/25.

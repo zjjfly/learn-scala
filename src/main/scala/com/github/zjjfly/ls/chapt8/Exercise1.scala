@@ -2,7 +2,7 @@ package com.github.zjjfly.ls.chapt8
 
 import java.text.SimpleDateFormat
 import java.util.Date
-
+import scala.language.postfixOps
 /**
   * Created by zjjfly on 16/4/16.
   */
@@ -107,7 +107,7 @@ class GameShop {
     val consoleToGames2
       : Map[GameConsole, List[(GameConsole, Game)]] = consoleToGames1 groupBy (_._1)
     val consoleToGames3
-      : Map[GameConsole, List[Game]] = consoleToGames2 mapValues (_ map (_._2))
+      : Map[GameConsole, List[Game]] = consoleToGames2.view.mapValues(_ map (_._2)).toMap
     consoleToGames3
   }
 

@@ -1,5 +1,7 @@
 package com.github.zjjfly.ls.chapt6
 
+import scala.language.postfixOps
+
 /**
   * List中类似map的函数
   * Created by zjjfly on 16/3/28.

@@ -3,6 +3,7 @@ package com.github.zjjfly.ls.chapt7
 import java.io.{FileNotFoundException, FileInputStream, File}
 
 import scala.util.{Success, Try, Failure}
+import scala.language.postfixOps
 
 /**
   * 一元集合

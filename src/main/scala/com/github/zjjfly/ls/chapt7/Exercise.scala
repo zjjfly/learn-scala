@@ -5,6 +5,7 @@ import java.io.File
 import scala.annotation.tailrec
 import scala.collection.mutable
 import scala.util.{Failure, Success, Try}
+import scala.language.postfixOps
 
 /**
   * Created by zjjfly on 16/4/6.

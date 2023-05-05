@@ -5,6 +5,7 @@ import scala.concurrent.duration.{Duration, _}
 import scala.concurrent.{Await, Future}
 import scala.io.Source
 import scala.util.{Failure, Success, Try}
+import scala.language.postfixOps
 
 /**
   * 类似java的Future
@@ -64,7 +65,7 @@ object FutureCollection {
     }
     val cityTemps = Future sequence Seq(Future(cityTemp("Fescno")),
                                         Future(cityTemp("Tempe")))
-    cityTemps onSuccess {
+    cityTemps map {
       case Seq(x, y) if x > y => println(s"Fresno is warmer: $x K")
       case Seq(x, y) if y > x => println(s"Tempe is warmer: $y K")
     }

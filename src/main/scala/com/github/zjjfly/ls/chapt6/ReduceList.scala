@@ -1,5 +1,7 @@
 package com.github.zjjfly.ls.chapt6
 
+import scala.language.postfixOps
+
 /**
   * list中类似reduce的高阶函数
   * Created by zjjfly on 16/3/28.

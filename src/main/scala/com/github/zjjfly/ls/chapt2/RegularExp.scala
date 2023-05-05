@@ -1,5 +1,6 @@
 package com.github.zjjfly.ls.chapt2
 
+import scala.language.postfixOps
 /**
   * Created by zjjfly on 16/3/10.
   */
